@@ -6,7 +6,7 @@
 
 ## checkpoint
 
-[21:20](<[https://](https://youtu.be/wm5gMKuwSYk?t=1280)>)
+[56:17](<[https://](https://youtu.be/wm5gMKuwSYk?t=3377)>)
 
 ## Steps
 
@@ -19,3 +19,5 @@
 7. Create styles folder
 8. Create utils folder (for utility functions)
 9. Create .env files which we can store secure keys
+
+## Create Home Heading text
