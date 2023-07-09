@@ -1,17 +1,18 @@
-# Share Prompt
+# Share Prompt (Javascript)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## First installation note
 
-√ What is your project named? ... share-prompt
-√ Would you like to use TypeScript? ... No
-√ Would you like to use ESLint? ... No
-√ Would you like to use Tailwind CSS? ... Yes
-√ Would you like to use `src/` directory? ... No
-√ Would you like to use App Router? (recommended) ... Yes
-√ Would you like to customize the default import alias? ... Yes
-√ What import alias would you like configured? ... @/* (press enter)
+- What is your project named? ... share-prompt
+- Would you like to use TypeScript? ... No
+- Would you like to use ESLint? ... No
+- Would you like to use Tailwind CSS? ... Yes
+- Would you like to use `src/` directory? ... No
+- Would you like to use App Router? (recommended) ... Yes
+- Would you like to customize the default import alias? ... Yes
+- What import alias would you like configured? ... @/* (press enter)
+
 Creating a new Next.js app in \share-prompt.
 
 ## Getting Started
