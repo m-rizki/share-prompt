@@ -6,7 +6,7 @@
 
 ## checkpoint
 
-[56:17](<[https://](https://youtu.be/wm5gMKuwSYk?t=3377)>)
+[01:05:41](<[https://](https://youtu.be/wm5gMKuwSYk?t=3941)>)
 
 ## Steps
 
@@ -21,3 +21,14 @@
 9. Create .env files which we can store secure keys
 
 ## Create Home Heading text
+
+## Components: part 1
+
+- Feed.jsx
+- Form.jsx
+- Nav.jsx
+- Profile.jsx
+- PromptCard.jsx
+- Provider.jsx
+
+## Desktop navigation
