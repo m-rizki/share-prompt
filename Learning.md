@@ -3,10 +3,11 @@
 1. [Next.js 13 Full Course 2023 | Build and Deploy a Full Stack App Using the Official React Framework](<[https://](https://youtu.be/wm5gMKuwSYk)>)
 2. [nextjs.org](<[https://](https://nextjs.org/)>)
 3. [When to use Server and Client Components?](<[https://](https://nextjs.org/docs/getting-started/react-essentials#when-to-use-server-and-client-components)>)
+4. [Next Auth Documentation]([https://](https://next-auth.js.org/getting-started/example))
 
 ## checkpoint
 
-[01:05:41](<[https://](https://youtu.be/wm5gMKuwSYk?t=3941)>)
+[01:37:01](<[https://](https://youtu.be/wm5gMKuwSYk?t=5821)>)
 
 ## Steps
 
@@ -37,4 +38,39 @@
 
 ## Mobile Navigation
 
-## Setup Auth Providers
+## Setup Auth Providers (FE)
+
+## Setup google cloud for Authentication
+
+1. go to [google console](<[https://](https://console.cloud.google.com/)>)
+2. Create New Project
+3. Select Project
+4. Open Navigation Menu -> API & Services -> OAuth consent screen
+5. create
+6. fill app name & email
+7. add authorized domain -> `http://localhost:3000` -> currently is not supported maybe
+8. create
+9. go to credentials -> create credentials -> OAuth client ID
+10. Application type -> web application
+11. Authorised JavaScript origins -> add 1 : `http://localhost:3000`
+12. Authorised redirect URIs -> add 1 : `http://localhost:3000`
+13. Create
+14. Got client id & client secret
+
+## Setup MongoDB atlas for database
+
+1. go to console mongodb atlas
+2. create cluster
+3. go to database access -> edit 1 -> password authentication
+4. Copy password access
+5. go to network access -> add current ip address
+6. add ip address anywhere
+7. go to database -> connect -> drivers -> copy mongoDB URI
+8. add to .env
+
+## Setup code to connect google console & mongodb
+
+1. app\api\auth\[...nextauth]\route.js
+2. utils\database.js
+3. .env
+4. models\user.js
