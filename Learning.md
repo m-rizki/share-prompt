@@ -36,3 +36,5 @@
 ## Sign In and Sign Out button setup
 
 ## Mobile Navigation
+
+## Setup Auth Providers
