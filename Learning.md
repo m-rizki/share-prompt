@@ -32,3 +32,5 @@
 - Provider.jsx
 
 ## Desktop navigation
+
+## Sign In and Sign Out button setup
