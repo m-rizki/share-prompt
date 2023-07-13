@@ -3,11 +3,13 @@
 1. [Next.js 13 Full Course 2023 | Build and Deploy a Full Stack App Using the Official React Framework](<[https://](https://youtu.be/wm5gMKuwSYk)>)
 2. [nextjs.org](<[https://](https://nextjs.org/)>)
 3. [When to use Server and Client Components?](<[https://](https://nextjs.org/docs/getting-started/react-essentials#when-to-use-server-and-client-components)>)
-4. [Next Auth Documentation]([https://](https://next-auth.js.org/getting-started/example))
+4. [Next Auth Documentation](<[https://](https://next-auth.js.org/getting-started/example)>)
+5. [Next auth generate NEXTAUTH_SECRET for local](<[https://](https://www.cryptool.org/en/cto/openssl)>)
+6. [apiauthcallbackprovider](<[https://](https://next-auth.js.org/getting-started/rest-api#getpost-apiauthcallbackprovider)>), [1:43:55](<[https://](https://youtu.be/wm5gMKuwSYk?t=6235)>)
 
 ## checkpoint
 
-[01:37:01](<[https://](https://youtu.be/wm5gMKuwSYk?t=5821)>)
+[01:49:00](<[https://](https://youtu.be/wm5gMKuwSYk?t=6540)>)
 
 ## Steps
 
@@ -74,3 +76,19 @@
 2. utils\database.js
 3. .env
 4. models\user.js
+
+## .env configuration for local (not production)
+
+```javascript
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=<random string>
+```
+
+Next auth secret : read secret part in option at [secret sectiion](<[https://](https://next-auth.js.org/configuration/options#secret)>).
+
+later on in production we'll be able to change those and make authentication works
+
+## Setup code for authentication process
+
+## Next: Create Prompt Page
