@@ -9,7 +9,7 @@
 
 ## checkpoint
 
-[02:14:41](<[https://](https://youtu.be/wm5gMKuwSYk?t=8081)>)
+[02:31:40](<[https://](https://youtu.be/wm5gMKuwSYk?t=9100)>)
 
 ## Steps
 
@@ -92,3 +92,7 @@ later on in production we'll be able to change those and make authentication wor
 ## Setup code for authentication process
 
 ## Feature: Create Prompt
+
+## Read all prompts and copy prompt
+
+## Profile page
