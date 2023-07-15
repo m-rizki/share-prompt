@@ -1,16 +1,16 @@
 # Most Important Resource
 
-1. [Next.js 13 Full Course 2023 | Build and Deploy a Full Stack App Using the Official React Framework](<[https://](https://youtu.be/wm5gMKuwSYk)>)
-2. [nextjs.org](<[https://](https://nextjs.org/)>)
-3. [When to use Server and Client Components?](<[https://](https://nextjs.org/docs/getting-started/react-essentials#when-to-use-server-and-client-components)>)
-4. [Next Auth Documentation](<[https://](https://next-auth.js.org/getting-started/example)>)
-5. [Next auth generate NEXTAUTH_SECRET for local](<[https://](https://www.cryptool.org/en/cto/openssl)>)
-6. [apiauthcallbackprovider](<[https://](https://next-auth.js.org/getting-started/rest-api#getpost-apiauthcallbackprovider)>), [1:43:55](<[https://](https://youtu.be/wm5gMKuwSYk?t=6235)>)
-7. [Awesome ChatGPT Prompts]([https://](https://prompts.chat/))
+1. [Next.js 13 Full Course 2023 | Build and Deploy a Full Stack App Using the Official React Framework](https://youtu.be/wm5gMKuwSYk)
+2. [nextjs.org](https://nextjs.org/)
+3. [When to use Server and Client Components?](https://nextjs.org/docs/getting-started/react-essentials#when-to-use-server-and-client-components)
+4. [Next Auth Documentation](https://next-auth.js.org/getting-started/example)
+5. [Next auth generate NEXTAUTH_SECRET for local](https://www.cryptool.org/en/cto/openssl)
+6. [apiauthcallbackprovider](https://next-auth.js.org/getting-started/rest-api#getpost-apiauthcallbackprovider), [1:43:55](https://youtu.be/wm5gMKuwSYk?t=6235)
+7. [Awesome ChatGPT Prompts](https://prompts.chat/)
 
 ## checkpoint
 
-[03:06:18](<[https://](https://youtu.be/wm5gMKuwSYk?t=11178)>)
+[03:06:18](https://youtu.be/wm5gMKuwSYk?t=11178)
 
 ## Steps
 
@@ -43,9 +43,9 @@
 
 ## Setup Auth Providers (FE)
 
-## Setup google cloud for Authentication
+## Setup google cloud for Authentication (local setup)
 
-1. go to [google console](<[https://](https://console.cloud.google.com/)>)
+1. go to [google console](https://console.cloud.google.com/)
 2. Create New Project
 3. Select Project
 4. Open Navigation Menu -> API & Services -> OAuth consent screen
