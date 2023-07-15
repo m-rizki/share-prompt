@@ -1,6 +1,33 @@
 # Share Prompt (Javascript)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is an open source AI prompting tool SharePrompt. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+[![Skateshop13](./public/screenshot/landing-page-share-prompt.png)](http://localhost:3000)
+
+> **Warning**
+> This project is still in development and is not ready for production use.
+>
+> It uses new technologies (Next.Js 13 with app router, server component) which are subject to change and may break your application.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Next Auth](https://next-auth.js.org/)
+- [MongoDB Atlas](https://www.mongodb.com/atlas)
+
+## Feature to be implemented
+
+- [ ] Limitation create prompt for each account
+- [ ] Prompt List page with pagination
+- [ ] Search (API request) -> for homepage and page list, filter search feature
+- [ ] Click on tag -> go to prompt list page (filter by tag)
+- [ ] View other profile
+- [ ] Implement tags with select
+- [ ] Implement multiple tags
+- [ ] Admin privilage (can edit/delete prompts for any account)
+- [ ] User Pages (for Admin only) and ban users
+- [ ] Dark Mode
 
 ## First installation note
 

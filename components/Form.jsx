@@ -31,14 +31,12 @@ const Form = ({ type, prompt, setPrompt, submitting, handleSubmit }) => {
         <label>
           <span className='font-satoshi font-semibold text-base text-gray-700'>
             Tag {` `}
-            <span className='font-normal'>
-              (#product, #webdevelopment, #idea)
-            </span>
+            <span className='font-normal'>(only 1 tag allowed)</span>
           </span>
           <input
             value={prompt.tag}
             onChange={(e) => setPrompt({ ...prompt, tag: e.target.value })}
-            placeholder='#tag'
+            placeholder='(example: webdevelopment)'
             required
             className='form_input'
           />

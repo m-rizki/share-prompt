@@ -10,7 +10,7 @@
 
 ## checkpoint
 
-[02:31:40](<[https://](https://youtu.be/wm5gMKuwSYk?t=9100)>)
+[03:06:18](<[https://](https://youtu.be/wm5gMKuwSYk?t=11178)>)
 
 ## Steps
 
