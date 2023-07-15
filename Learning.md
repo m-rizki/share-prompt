@@ -6,6 +6,7 @@
 4. [Next Auth Documentation](<[https://](https://next-auth.js.org/getting-started/example)>)
 5. [Next auth generate NEXTAUTH_SECRET for local](<[https://](https://www.cryptool.org/en/cto/openssl)>)
 6. [apiauthcallbackprovider](<[https://](https://next-auth.js.org/getting-started/rest-api#getpost-apiauthcallbackprovider)>), [1:43:55](<[https://](https://youtu.be/wm5gMKuwSYk?t=6235)>)
+7. [Awesome ChatGPT Prompts]([https://](https://prompts.chat/))
 
 ## checkpoint
 
@@ -95,4 +96,4 @@ later on in production we'll be able to change those and make authentication wor
 
 ## Read all prompts and copy prompt
 
-## Profile page
+## Profile page, Edit & delete
