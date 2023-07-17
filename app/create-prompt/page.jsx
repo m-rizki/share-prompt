@@ -30,10 +30,14 @@ const CreatePrompt = () => {
       })
 
       if (response.ok) {
-        router.push('/')
+        router.push('/profile')
+      }
+      if (response.status === 403) {
+        const data = await response.json()
+        alert(data.error)
       }
     } catch (error) {
-      console.log(error)
+      setError(error)
     } finally {
       setSubmitting(false)
     }

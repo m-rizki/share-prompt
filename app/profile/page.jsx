@@ -2,8 +2,9 @@
 
 import Profile from '@components/Profile'
 import { useSession } from 'next-auth/react'
+import { revalidatePath } from 'next/cache'
 import { useRouter } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 const MyProfile = () => {
   const { data: session } = useSession()
@@ -32,20 +33,21 @@ const MyProfile = () => {
       } catch (error) {
         console.log(error)
       } finally {
-        router.push('/')
+        router.refresh()
+        fetchPrompts()
       }
     }
   }
 
-  useEffect(() => {
-    const fetchPrompts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/prompts`)
-      const data = await response.json()
-      setPrompts(data)
-    }
-
-    if (session?.user.id) fetchPrompts()
+  const fetchPrompts = useCallback(async () => {
+    const response = await fetch(`/api/users/${session?.user.id}/prompts`)
+    const data = await response.json()
+    setPrompts(data)
   }, [])
+
+  useEffect(() => {
+    if (session?.user.id) fetchPrompts()
+  }, [fetchPrompts])
 
   return (
     <Profile
