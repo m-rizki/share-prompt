@@ -10,11 +10,10 @@ export const POST = async (req) => {
     await connectToDB()
 
     const currentUserPrompts = await Prompt.find({ creator: userId }).populate('creator')
-    console.log(currentUserPrompts.length)
     
-    if (currentUserPrompts.length >= 5) {
+    if (currentUserPrompts.length === 5) {
       const errorResponse = {
-        error: `Maximum allowed prompts exceeded, count: ${currentUserPrompts.length}`,
+        error: `You have reached the maximum limit of ${currentUserPrompts.length} posts.`,
       };
       return new Response(JSON.stringify(errorResponse), { status: 403 });
     }
