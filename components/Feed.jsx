@@ -4,30 +4,45 @@ import { useState, useEffect, useCallback } from 'react'
 import PromptCard from './PromptCard'
 
 const PromptCardList = ({ data, handleTagClick }) => {
-  return (
-    <div className='mt-16 prompt_layout'>
-      {data.map((item) => (
-        <PromptCard
-          key={item._id}
-          prompt={item}
-          handleTagClick={handleTagClick}
-        />
-      ))}
-    </div>
-  )
+  return data.map((item) => (
+    <PromptCard key={item._id} prompt={item} handleTagClick={handleTagClick} />
+  ))
 }
 
 const Feed = () => {
   const [searchtext, setSearchtext] = useState('')
   const [prompts, setPrompts] = useState([])
+  const [showBtnShowMore, setShowBtnShowMore] = useState(true)
+  const [showMore, setShowMore] = useState(true)
+  const [page, setPage] = useState(1)
 
   const handleSearchChange = (e) => {}
 
   const fetchPrompts = useCallback(async () => {
-    const response = await fetch('/api/prompt')
+    const params = {
+      limit: 10,
+      page: page,
+    }
+    const response = await fetch(
+      `/api/prompt?page=${params.page}&limit=${params.limit}`
+    )
     const data = await response.json()
-    setPrompts(data)
-  }, [])
+    setPrompts((prev) => {
+      const newPrompts = [...prev, ...data]
+      if (prev.length === newPrompts.length) {
+        setShowBtnShowMore(false)
+        return prev
+      }
+      return newPrompts
+    })
+
+    setShowMore(false)
+  }, [page])
+
+  const handleShowMore = () => {
+    setShowMore((prev) => !prev)
+    setPage((prev) => prev + 1)
+  }
 
   useEffect(() => {
     fetchPrompts()
@@ -46,7 +61,20 @@ const Feed = () => {
         />
       </form>
 
-      <PromptCardList data={prompts} handleTagClick={() => {}} />
+      <div className='mt-16 prompt_layout'>
+        <PromptCardList data={prompts} handleTagClick={() => {}} />
+      </div>
+      {showBtnShowMore ? (
+        <button
+          className='my-16 outline_btn'
+          onClick={handleShowMore}
+          disabled={showMore}
+        >
+          {showMore ? `Loading...` : `Load More`}
+        </button>
+      ) : (
+        <p className='my-16'>No more prompt available</p>
+      )}
     </section>
   )
 }
