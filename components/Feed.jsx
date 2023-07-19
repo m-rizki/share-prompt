@@ -81,12 +81,13 @@ const Feed = () => {
       <form className='relative w-full flex-center'>
         <input
           type='text'
-          placeholder='Search for a tag or a username'
+          placeholder='Search by prompt contents'
           onChange={(e) => handleSearchChange(e.target.value)}
           required
           className='search_input peer'
         />
       </form>
+      {showMore ? <p className='my-8'>Loading...</p> : null}
 
       <div className='mt-16 prompt_layout'>
         <PromptCardList data={prompts} handleTagClick={handleTagClick} />
