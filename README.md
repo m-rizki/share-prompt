@@ -20,8 +20,7 @@ This is an open source AI prompting tool SharePrompt. This is a [Next.js](https:
 
 - [x] Limitation create prompt for each account
 - [x] Prompts Feed with lazy loading
-- [ ] Search (API request)
-- [ ] Click on tag -> Search by tag
+- [x] Search by prompt (Via fetching API)
 - [ ] View other profile
 
 ## First installation note
