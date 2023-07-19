@@ -21,7 +21,9 @@ This is an open source AI prompting tool SharePrompt. This is a [Next.js](https:
 - [x] Limitation create prompt for each account
 - [x] Prompts Feed with lazy loading
 - [x] Search by prompt (Via fetching API)
-- [ ] View other profile
+- [x] View other profile
+- [ ] Dark Mode
+- [ ] Admin privilage (CRUD prompts, ban user)
 
 ## First installation note
 
@@ -32,7 +34,7 @@ This is an open source AI prompting tool SharePrompt. This is a [Next.js](https:
 - Would you like to use `src/` directory? ... No
 - Would you like to use App Router? (recommended) ... Yes
 - Would you like to customize the default import alias? ... Yes
-- What import alias would you like configured? ... @/* (press enter)
+- What import alias would you like configured? ... @/\* (press enter)
 
 Creating a new Next.js app in \share-prompt.
 
