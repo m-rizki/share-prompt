@@ -19,15 +19,10 @@ This is an open source AI prompting tool SharePrompt. This is a [Next.js](https:
 ## Feature to be implemented
 
 - [x] Limitation create prompt for each account
-- [ ] Prompt List page with pagination
-- [ ] Search (API request) -> for homepage and page list, filter search feature
-- [ ] Click on tag -> go to prompt list page (filter by tag)
+- [x] Prompts Feed with lazy loading
+- [ ] Search (API request)
+- [ ] Click on tag -> Search by tag
 - [ ] View other profile
-- [ ] Implement tags with select
-- [ ] Implement multiple tags
-- [ ] Admin privilage (can edit/delete prompts for any account)
-- [ ] User Pages (for Admin only) and ban users
-- [ ] Dark Mode
 
 ## First installation note
 
