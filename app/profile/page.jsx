@@ -40,13 +40,17 @@ const MyProfile = () => {
   }
 
   const fetchPrompts = useCallback(async () => {
-    const response = await fetch(`/api/users/${session?.user.id}/prompts`)
-    const data = await response.json()
-    setPrompts(data)
-  }, [])
+    console.log('running') // running 2x because session is change
+    if (session) {
+      const response = await fetch(`/api/users/${session.user.id}/prompts`)
+      const data = await response.json()
+      setPrompts(data)
+    }
+  }, [session])
 
+  //  FIXME: why if i refresh this URL the useEffect is not running?
   useEffect(() => {
-    if (session?.user.id) fetchPrompts()
+    fetchPrompts()
   }, [fetchPrompts])
 
   return (

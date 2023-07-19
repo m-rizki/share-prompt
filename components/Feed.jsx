@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import PromptCard from './PromptCard'
+import { debounce } from '@utils/helpers/debounce'
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return data.map((item) => (
@@ -10,39 +11,66 @@ const PromptCardList = ({ data, handleTagClick }) => {
 }
 
 const Feed = () => {
-  const [searchtext, setSearchtext] = useState('')
+  // search states
+  const [searchText, setSearchText] = useState('')
+
   const [prompts, setPrompts] = useState([])
   const [showBtnShowMore, setShowBtnShowMore] = useState(true)
   const [showMore, setShowMore] = useState(true)
   const [page, setPage] = useState(1)
 
-  const handleSearchChange = (e) => {}
-
   const fetchPrompts = useCallback(async () => {
     const params = {
       limit: 10,
       page: page,
+      searchText: searchText,
     }
     const response = await fetch(
-      `/api/prompt?page=${params.page}&limit=${params.limit}`
+      `/api/prompt?page=${params.page}&limit=${
+        params.limit
+      }&search=${encodeURIComponent(params.searchText)}`
     )
-    const data = await response.json()
-    setPrompts((prev) => {
-      const newPrompts = [...prev, ...data]
-      if (prev.length === newPrompts.length) {
-        setShowBtnShowMore(false)
-        return prev
-      }
-      return newPrompts
-    })
+
+    if (response.ok) {
+      const data = await response.json()
+      setPrompts((prev) => {
+        if (data.length === 0) {
+          setShowBtnShowMore(false)
+          return prev
+        }
+        const newPrompts = [...prev, ...data]
+        setShowBtnShowMore(true)
+        return newPrompts
+      })
+    }
+
+    if (response.status === 404) {
+      setShowBtnShowMore(false)
+    }
 
     setShowMore(false)
-  }, [page])
+  }, [page, searchText])
 
   const handleShowMore = () => {
     setShowMore((prev) => !prev)
     setPage((prev) => prev + 1)
   }
+
+  const handleTagClick = (tagName) => {
+    alert(`tag: #${tagName}`)
+  }
+
+  const handleSearchChange = useCallback(
+    debounce((value) => setSearchText(value), 300),
+    []
+  )
+
+  useEffect(() => {
+    setPrompts([])
+    setShowBtnShowMore(true)
+    setShowMore(true)
+    setPage(1)
+  }, [searchText])
 
   useEffect(() => {
     fetchPrompts()
@@ -54,15 +82,14 @@ const Feed = () => {
         <input
           type='text'
           placeholder='Search for a tag or a username'
-          value={searchtext}
-          onChange={handleSearchChange}
+          onChange={(e) => handleSearchChange(e.target.value)}
           required
           className='search_input peer'
         />
       </form>
 
       <div className='mt-16 prompt_layout'>
-        <PromptCardList data={prompts} handleTagClick={() => {}} />
+        <PromptCardList data={prompts} handleTagClick={handleTagClick} />
       </div>
       {showBtnShowMore ? (
         <button
