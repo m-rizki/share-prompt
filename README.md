@@ -2,7 +2,7 @@
 
 This is an open source AI prompting tool SharePrompt. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[![Skateshop13](./public/screenshot/landing-page-share-prompt.png)](http://localhost:3000)
+[![SharePrompt](./public/screenshot/landing-page-share-prompt.png)](http://localhost:3000)
 
 > **Warning**
 > This project is still in development and is not ready for production use.
